@@ -47,7 +47,7 @@ export default function Home() {
           VOS HACKATONS <br /> EN MIEUX
         </h1>
         <p className="max-w-2xl text-center p-5 text-lg m-auto">
-          la meilleur plateforme d&apos;organisation et de gestion d&apos;hackaton dans le monde.
+          la meilleur plateforme d&apos;organisation et de gestion d&apos;hackaton dans le monde de demain.
         </p>
       </div>
 
