@@ -10,7 +10,8 @@
   --white : #FFFFFF,
   --black : #141111,
   --destruction-red : #D93842,
-  --destruction-green : #62D938
+  --destruction-green : #62D938,
+
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -19,11 +20,17 @@
 } */
 
 body {
-  @apply bg-blue-muted
+  @apply bg-gradient-radial-home h-screen
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.hamMenu {
+  @apply w-0 overflow-hidden h-40 z-50 py-6 absolute
+}
+.hamMenuOn {
+  @apply w-[99%] overflow-hidden h-40 bg-white z-50 py-6 absolute
 }
