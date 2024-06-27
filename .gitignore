@@ -34,3 +34,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# request to https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap failed, reason: socket hang up
