@@ -30,7 +30,7 @@ export default function Home() {
           Vos hackatons <br /> en <span className="text-foreground-green ">mieux</span>
         </h1>
         <p className="max-w-2xl text-center p-5 text-lg m-auto max-sm:text-xl">
-          la meilleur plateforme d&apos;organisation et de gestion d&apos;hackaton dans le monde de demain.
+          la meilleur plateforme d&apos;organisation et de gestion d&apos;hackaton et la plus simple.
         </p>
       </div>
       
