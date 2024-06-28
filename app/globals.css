@@ -29,8 +29,25 @@ body {
   }
 }
 .hamMenu {
-  @apply w-0 overflow-hidden h-40 z-50 py-6 absolute
+  height : 0px;
+  animation : hideNav 0.5s ease-out ;
 }
 .hamMenuOn {
-  @apply w-[99%] overflow-hidden h-40 bg-white z-50 py-6 absolute
+  height : 100%;
+  animation : showNav 0.5s ease-out ;
+}
+
+@keyframes showNav {
+  from {
+    height : 0;
+  }to {
+    height : 100%
+  }
+}
+@keyframes hideNav {
+  from {
+    height : 200px;
+  }to {
+    height : 0px
+  }
 }
