@@ -40,7 +40,7 @@ export const NavBar = () => {
         <Link href="/login" className="bg-base-blue text-white px-3 py-1 rounded-md font-semibold">
           se connecter
         </Link>
-        <Link href="/signin" className="font-semibold text-base-blue border px-4 rounded-md">
+        <Link href="/signin" className="font-semibold text-base-blue border px-4 rounded-md py-1">
           s&apos;inscrire
         </Link>
       </div>
