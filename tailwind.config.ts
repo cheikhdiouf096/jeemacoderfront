@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial-home": "linear-gradient(0deg, rgba(2,20,23,1) 0%, rgba(0,205,205,0.5186449579831933) 100%);"
+        "gradient-radial-home": " linear-gradient(0deg, rgba(10,114,115,1) 0%, rgba(0,205,205,0.5186449579831933) 100%)"
       },
         colors : {
             "base-blue" : "#15548E",
