@@ -21,34 +21,31 @@ export const MobileNav = () => {
         }
 }
 
+const pathName = usePathname()
+
 return (<div>
-        <div  className="flex justify-between bg-white h-10 py-3 items-center px-2 ">
+        <div  className="flex justify-between bg-white h-14 py-3 items-center px-2 ">
+          <h1 className="font-semibold">JEMACODER </h1>
           <button onClick={toggleMenu}>
             <HamburgerMenuIcon className="size-8" />
           </button>
-          <h1 className="font-semibold">JEMACODER </h1>
         </div>
-          <div className={isVisible} >
-            <HamburgerMenu />
-          </div>
-      </div>
-    )
-}
-
-const HamburgerMenu = () => {
-const pathName = usePathname()
-
-    return (<ul className="py-2">
+        
+            {/* <HamburgerMenu /> */}
+            <ul className={`${isVisible} border absolute w-full flex flex-col items-center bg-white z-50 overflow-hidden`}>
+              <div className="py-5"></div>
         {
           linkData.map((d , i) => (
-              <li key={i}>
-                <Link className={clsx("font-semibold px-4 h-10 text-center py-3", 
-                {"bg-white  text-base-blue  " : pathName === d.href }
+              <li key={i} className="text-base-blue w-full text-lg flex justify-center">
+                <Link className={clsx("font-semibold w-full text-center p-2 rounded-md ", 
+                {"bg-base-blue text-white" : pathName === d.href }
                 )}
                     href={d.href} >{d.link}
                 </Link>
                 </li>
           ))
         }
-      </ul>)
+      </ul>
+          </div>
+    )
 }
