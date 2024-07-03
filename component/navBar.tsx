@@ -37,10 +37,10 @@ export const NavBar = () => {
         </ul>
       </div>
       <div className="flex gap-5">
-        <Link href="/login" className="bg-base-blue text-white px-3 py-1 rounded-md font-semibold">
+        <Link href="/connexion" className="bg-base-blue text-white px-3 py-1 rounded-md font-semibold">
           se connecter
         </Link>
-        <Link href="/signin" className="font-semibold text-base-blue border px-4 rounded-md py-1">
+        <Link href="/inscription" className="font-semibold text-base-blue border px-4 rounded-md py-1">
           s&apos;inscrire
         </Link>
       </div>
