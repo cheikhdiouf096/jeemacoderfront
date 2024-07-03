@@ -12,7 +12,7 @@ const linkData = [
 ]
 
 
-export default function Home() {
+export default function Connexion() {
 
 
   return (
@@ -36,7 +36,7 @@ export default function Home() {
       
       <div className="flex justify-center items-center gap-10 p-5">
         
-        <Button href="/" className="bg-foreground-green py-2 px-5 rounded-md text-white text-xl ">
+        <Button href="/connexion" className="bg-foreground-green py-2 px-5 rounded-md text-white text-xl ">
           Rejoindre
         </Button>
 
@@ -70,10 +70,10 @@ const NavBar = () => {
       </ul>
     </div>
     <div className="flex gap-5">
-      <Link href="/login" className="bg-base-blue text-white px-3 py-1 rounded-md font-semibold">
+      <Link href="/connexion" className="bg-base-blue text-white px-3 py-1 rounded-md font-semibold">
         se connecter
       </Link>
-      <Link href="/signin" className="font-semibold text-base-blue border px-4 rounded-md">
+      <Link href="/inscription" className="font-semibold text-base-blue border px-4 rounded-md">
         s&apos;inscrire
       </Link>
     </div>
