@@ -3,6 +3,7 @@ import { Button } from './button'
 
 function Hero() {
   return (<div>
+    
   <div className="max-w-4xl m-auto text-white ">
     {/* page aceuil */}
     <h1 className="text-center text-8xl font-extrabold p-10 max-sm:text-4xl">
@@ -12,13 +13,13 @@ function Hero() {
       la meilleur plateforme d&apos;organisation et de gestion d&apos;hackaton dans le monde de demain.
     </p>
   </div>
-  
+
   <div className="flex justify-center items-center gap-3 p-5">
     
-    <Button href="/" className="bg-dark-blue  text-white text-xl border-2 border-dark-blue  hover:bg-transparent hover:text-dark-blue">
+    <Button href="/" className="bg-dark-blue  text-white text-lg border-2 border-dark-blue  hover:bg-transparent hover:text-dark-blue">
       Créer un hackaton
     </Button>
-    <Button href="/" className="bg-none border-2 border-dark-blue text-white text-xl hover:bg-dark-blue transition-all">
+    <Button href="/" className="bg-none border-2 border-dark-blue text-white text-lg hover:bg-dark-blue transition-all">
       Rejoindre un hackaton
     </Button>
   </div>

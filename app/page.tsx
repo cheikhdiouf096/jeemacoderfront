@@ -20,7 +20,6 @@ export default function Home() {
 
       <Hero />
 
-      < FormInput type="text" placeholder="name" value={value} className="" legend="" />
     </main>
   );
 }
