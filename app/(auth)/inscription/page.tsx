@@ -1,56 +1,53 @@
-// import { CheckIcon } from '@heroicons/react/20/solid'
+"use client"
+import { Button } from "@/component/button";
+import { Checkbox } from "@/component/form/checkox";
+import FormInput from "@/component/form/input";
+import { Container } from "@/component/container";
+import Image from "next/image";
+import  imgForm  from "../../../assets/img/3692685.jpg";
+import Titre1 from "@/component/h1";
 
-const includedFeatures = [
-    'Private htmlForum access',
-    'Member resources',
-    'Entry to annual conference',
-    'Official member t-shirt',
-  ]
-  
-  export default function example() {
-    return (
-      <div className="bg-gray-400 h-screen flex flex-col items-center justify-center py-24 sm:py-32">
-         <div>
-             <p className="mt-2 text-lg text-white-600 font-bold">
-                Formulaire d'inscription 
-             </p>
-         </div>
-  
-        <div className="w-full max-w-xs">
-          <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
-                Nom
-              </label>
-              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Nom" />
+export default function Page() {
+  return (
+      <Container className="flex justify-center h-screen items-center">
+        <div className="flex bg-white w-full items-center px-8 py-4 rounded">
+        <div className="w-6/12">
+        <Titre1 className=""  title="Inscription"/>
+          <form className="">
+
+          <div className="flex flex-col my-4">
+            <div className="flex row justify between">
+            < FormInput type="name" placeholder="Entrez votre prenom" value="" className="" legend="Prenom" />
+            < FormInput type="name" placeholder="Entrez votre nom" value="" className="" legend="Nom" />
             </div>
-            <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-                Email
-              </label>
-              <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="email" />
+            < FormInput type="email" placeholder="email" value="" className="" legend="email" />
+            <div className="flex row justify between">
+            < FormInput type="password" placeholder="********" value="" className="" legend="Password" />
+            < FormInput type="password" placeholder="********" value="" className="" legend="Confirm Password" />
             </div>
-            <div className="mb-6">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
-                Mot de passe
-              </label>
-              <input className="shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" />
-              <p className="text-red-500 text-xs italic">Choisissez un mot de passe.</p>
+          </div>
+
+
+              <div className="flex justify-between my-6">
+                <Checkbox label="Accepter les conditions d'utilsations" checked />
+                
             </div>
-            <div className="flex items-center justify-between">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                Inscription
-              </button>
-              <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-                Mot de passe oublié?
-              </a>
+
+            <div className="flex flex-col">
+            <Button href="/inscription" 
+              className="bg-dark-blue text-center  text-white text-lg border-2 border-dark-blue  hover:bg-transparent hover:text-dark-blue" > se connecter </Button>
+            <Button href="/" className=""> se connecter avec google </Button>
             </div>
+
           </form>
-          <p className="text-center text-gray-500 text-xs">
-            &copy;2020 Acme Corp. All rights reserved.
+          <p className="text-center font-bold text-gray-500 text-xs ">
+            J&apos;ai déja un compte <a className="text-red-500 " href="/connexion" >Se connecter</a>
           </p>
         </div>
+        <div className="divImg w-6/12">
+          <Image src={imgForm} alt=""  />
+        </div>
       </div>
-    )
-  }
-  
+      </Container>
+  )
+}
