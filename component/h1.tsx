@@ -14,7 +14,7 @@ import React from 'react'
 
 export  default function Titre1  ({title , className} : {title : string ,  className : string }) {
   return (
-    <h1  className={`${className} text-center my-10 font-semibold`}>
+    <h1  className={`${className} text-center my-10 font-bold`}>
             {title}
     </h1>
   )

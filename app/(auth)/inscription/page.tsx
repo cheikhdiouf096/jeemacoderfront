@@ -16,12 +16,12 @@ export default function Page() {
           <form className="">
 
           <div className="flex flex-col my-4">
-            <div className="flex row justify between">
+            <div className="flex row justify-between">
             < FormInput type="name" placeholder="Entrez votre prenom" value="" className="" legend="Prenom" />
             < FormInput type="name" placeholder="Entrez votre nom" value="" className="" legend="Nom" />
             </div>
             < FormInput type="email" placeholder="email" value="" className="" legend="email" />
-            <div className="flex row justify between">
+            <div className="flex row justify-between">
             < FormInput type="password" placeholder="********" value="" className="" legend="Password" />
             < FormInput type="password" placeholder="********" value="" className="" legend="Confirm Password" />
             </div>
@@ -34,9 +34,9 @@ export default function Page() {
             </div>
 
             <div className="flex flex-col">
-            <Button href="/inscription" 
-              className="bg-dark-blue text-center  text-white text-lg border-2 border-dark-blue  hover:bg-transparent hover:text-dark-blue" > se connecter </Button>
-            <Button href="/" className=""> se connecter avec google </Button>
+            <Button href="/" 
+              className="bg-dark-blue text-center  text-white text-lg border-2 border-dark-blue  hover:bg-transparent hover:text-dark-blue" > S'inscrire</Button>
+            <Button href="/" className=""> S'inscrire avec google </Button>
             </div>
 
           </form>

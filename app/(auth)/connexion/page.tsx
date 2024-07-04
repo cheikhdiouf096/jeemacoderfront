@@ -16,23 +16,23 @@ export default function Page() {
           <form className="">
 
           <div className="flex flex-col my-4">
-            < FormInput type="email" placeholder="email" value="" className="" legend="name" />
+            < FormInput type="email" placeholder="email" value="" className="" legend="email" />
             < FormInput type="password" placeholder="********" value="" className="" legend="password" />
           </div>
 
 
               <div className="flex justify-between my-6">
                 <Checkbox label="remenber me" checked />
-                <a  href="#">
+                <a  href="/fgpwd">
                   Mot de passe oublié?
                 </a>
 
             </div>
 
             <div className="flex flex-col">
-            <Button href="/inscription" 
+            <Button href="/" 
               className="bg-dark-blue text-center  text-white text-lg border-2 border-dark-blue  hover:bg-transparent hover:text-dark-blue" > se connecter </Button>
-            <Button href="/" className=""> se onnecter avec google </Button>
+            <Button href="/" className=""> se connecter avec google </Button>
             </div>
 
           </form>
