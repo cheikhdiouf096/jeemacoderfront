@@ -86,7 +86,7 @@ export default function Page() {
                 href="/"
                 className="bg-dark-blue text-center my-2 text-white text-lg border-2 border-dark-blue hover:bg-transparent hover:text-dark-blue"
               >
-                S'inscrire
+                S&apos;inscrire
               </Button>
               <Button
                 href="/"

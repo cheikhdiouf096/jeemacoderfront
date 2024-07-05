@@ -77,7 +77,7 @@ export default function Page() {
           <p className="text-center font-bold text-gray-500 text-xs mt-4">
             Je n&apos;ai pas de compte{" "}
             <a className="text-red-500" href="/inscription">
-              S'inscrire
+              S&apos;inscrire
             </a>
           </p>
         </div>
