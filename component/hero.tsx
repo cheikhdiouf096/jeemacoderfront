@@ -16,11 +16,11 @@ function Hero() {
 
   <div className="flex justify-center items-center gap-3 p-5">
     
-    <Button href="/" className="bg-dark-blue  text-white text-lg border-2 border-dark-blue  hover:bg-transparent hover:text-dark-blue">
-      Créer un hackaton
+    <Button href="/connexion" className="bg-dark-blue  text-white text-lg border-2 border-dark-blue  hover:bg-transparent hover:text-dark-blue">
+      Se connecter
     </Button>
-    <Button href="/" className="bg-none border-2 border-dark-blue text-white text-lg hover:bg-dark-blue transition-all">
-      Rejoindre un hackaton
+    <Button href="/inscription" className="bg-none border-2 border-dark-blue text-white text-lg hover:bg-dark-blue transition-all">
+      S'inscrire
     </Button>
   </div>
   </div>)

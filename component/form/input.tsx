@@ -12,7 +12,7 @@ export default function FormInput({type, value, placeholder, className, legend} 
               value={Inputvalue} 
               placeholder={placeholder} 
               onChange={(e) => {setInputValue(e.target.value)}}
-              className={clsx(` shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`, className)} />
+              className={clsx(` shadow appearance-none border rounded w-full m-auto py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`, className)} />
     </div>
   )
 }
