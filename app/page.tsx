@@ -1,6 +1,4 @@
 'use client'
-import {Button} from "@/component/button";
-import FormInput from "@/component/form/input";
 import Hero from "@/component/hero";
 import { MobileNav } from "@/component/menuHamburger";
 import { NavBar } from "@/component/navBar";
@@ -10,7 +8,7 @@ export default function Home() {
   const [value, setValue] = useState('');
 
   return (
-    <main className="font-mono">
+    <main className="font-mono bg-gradient-radial-home h-screen">
       {/* nav bar */}
       <NavBar />
       {/* hamburger nav */}

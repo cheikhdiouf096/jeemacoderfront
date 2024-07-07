@@ -20,8 +20,7 @@
 } */
 
 body {
-  background: rgb(2,6,23);
-  @apply bg-gradient-radial-home h-screen
+  /* background: rgb(2,6,23); */
 }
 
 @layer utilities {
