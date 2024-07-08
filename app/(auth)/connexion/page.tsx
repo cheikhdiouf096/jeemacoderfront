@@ -22,6 +22,10 @@ export default function Page() {
     remember : false
   })
   const handleChange = (e : ChangeEvent<HTMLInputElement>) => {
+    const input = e.currentTarget;
+    setValue({...value , [input.id] : input.value})
+  }
+  const handleSubmit = (e : ChangeEvent<HTMLFormElement>) => {
     e.preventDefault()
     const input = e.currentTarget;
     setValue({...value , [input.id] : input.value})
@@ -32,7 +36,7 @@ export default function Page() {
     
   //   for(let [key , value] of formData.entries()) {
   //   console.log(`${key} : ${value}`);}
-  // }
+  }
 
 
   return (
@@ -53,7 +57,7 @@ export default function Page() {
       <div className="flex flex-col md:flex-row bg-white w-full max-w-4xl items-center p-8 rounded">
         <div className="w-full md:w-1/2">
           <Titre1 className="" title="Connexion" />
-          <form className="">
+          <form className="" onSubmit={handleSubmit}>
             <div className="flex flex-col my-4">
               <FormInput
                 id="email"
@@ -112,5 +116,4 @@ export default function Page() {
       </div>
     </div>
   );
-}
 }

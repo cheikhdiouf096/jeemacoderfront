@@ -1,6 +1,11 @@
 export default function Page () {
 
-    return (<div>
-        voici la page dashboard
+    return (<div className="flex">
+        <div>
+            
+        </div>
+        <div>
+
+        </div>
     </div>)
 }
