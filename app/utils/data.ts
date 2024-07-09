@@ -29,5 +29,36 @@ export const hackathons = [
       participants: 50,
       tags: ['cybersecurity', 'networking'],
     }
+    ,
+    {
+        id: 4,
+        date: 'Thursday, Aug 15, 2023, 02:00 PM',
+        title: 'CodeFest 2024',
+        organizer: 'Global Code',
+        description: 'Montrez vos compétences en codage...',
+        isPublic: true,
+        participants: 50,
+        tags: ['cybersecurity', 'networking'],
+      },
+      {
+        id: 5,
+        date: 'Thursday, Aug 15, 2023, 02:00 PM',
+        title: 'CodeFest 2024',
+        organizer: 'Global Code',
+        description: 'Montrez vos compétences en codage...',
+        isPublic: true,
+        participants: 50,
+        tags: ['cybersecurity', 'networking'],
+      },
+      {
+        id: 6,
+        date: 'Thursday, Aug 15, 2023, 02:00 PM',
+        title: 'CodeFest 2024',
+        organizer: 'Global Code',
+        description: 'Montrez vos compétences en codage...',
+        isPublic: true,
+        participants: 50,
+        tags: ['cybersecurity', 'networking'],
+      }
   ];
   
