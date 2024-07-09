@@ -103,10 +103,10 @@ export default function Page() {
               </Button>
             </div>
           </form>
-          <p className="text-center font-bold text-gray-500 text-xs mt-4">
+          <p className="text-center text-xl font-bold text-gray-500 mt-4">
             Je n&apos;ai pas de compte{" "}
             <a className="text-red-500" href="/inscription">
-              S&amp;inscrire
+              S&apos; inscrire
             </a>
           </p>
         </div>
