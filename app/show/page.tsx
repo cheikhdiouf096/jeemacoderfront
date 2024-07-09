@@ -1,4 +1,5 @@
 import React from 'react';
+import  Sidebar  from "../../component/sidebare/sidebare";
 
 export default function Page() {
     const description = [
@@ -11,6 +12,7 @@ export default function Page() {
 
     return (
         <div>
+            <Sidebar/>
             <h1>description</h1>
             <div className='p-24 flex flex-row flex-wrap'>
                 {description.map(({ taille, age, nom }, index) => (
@@ -21,6 +23,7 @@ export default function Page() {
                     </div>
                 ))}
             </div>
+            <a href="/org">organisation</a>
         </div>
     );
 }
