@@ -12,7 +12,7 @@ export default function Page() {
 
     return (
         <div>
-            <Sidebar/>
+            <Sidebar/> 
             <h1>description</h1>
             <div className='p-24 flex flex-row flex-wrap'>
                 {description.map(({ taille, age, nom }, index) => (
