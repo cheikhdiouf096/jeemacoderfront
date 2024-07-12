@@ -20,7 +20,11 @@ const config: Config = {
             "gray-foreground" : "#D9D9D9",
             "muted" : "#F5F5F5",
             "destruction-red" : "#D93842",
-            "foreground-green" : "#1E490E"
+            "foreground-green" : "#1E490E",
+            // 
+            "light-green" : "#62D938",
+            "dark-green" : "#0F4424",
+            "dark-green-hover" : "#18793F"
       },
     },
   },
