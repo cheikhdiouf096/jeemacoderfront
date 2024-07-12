@@ -10,7 +10,6 @@ export default function Home() {
 
   return (
     <main className="font-mono bg-gradient-radial-home h-screen">
-       <Sidebar />
       {/* nav bar */}
       <NavBar />
       {/* hamburger nav */}
