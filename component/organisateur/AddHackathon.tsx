@@ -13,7 +13,7 @@ const AddHackathon: React.FC = () => {
     secondPrize: '',
     thirdPrize: '',
     location: '',
-    logo: null
+    // logo: null
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -23,7 +23,9 @@ const AddHackathon: React.FC = () => {
 
   const handleLogoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      setFormData({ ...formData, logo: e.target.files[0] });
+      setFormData({ ...formData, 
+        // logo: e.target.files[0]
+       });
     }
   };
 

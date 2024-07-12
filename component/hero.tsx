@@ -22,9 +22,6 @@ function Hero() {
     <Button href="/inscription" className="bg-none border-2 border-dark-blue text-white text-lg hover:bg-dark-blue transition-all">
       S'inscrire
     </Button>
-    <Button href="/show" className="bg-none border-2 border-dark-blue text-white text-lg hover:bg-dark-blue transition-all">
-      Show
-    </Button>
   </div>
   </div>)
 }
