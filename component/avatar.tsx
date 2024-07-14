@@ -1,4 +1,5 @@
-export const Avatar = ({name , email} : {name : string , email : string}) => {
+export const Avatar = ({profil} : {profil : {name : string , email : string}}) => {
+    const {name , email} = profil
     return <div className="max-w-full flex gap-1 items-center">
         <div className="size-10 border rounded-full "></div>
         <div className="flex flex-col ">
