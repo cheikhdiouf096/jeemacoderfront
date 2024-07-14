@@ -1,3 +1,4 @@
+"use client"
 import { BellIcon } from "@radix-ui/react-icons"
 import { Avatar } from "../avatar"
 
