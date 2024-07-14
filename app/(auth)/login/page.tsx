@@ -2,6 +2,7 @@
 import { Button } from "@/component/form/button";
 import { Checkbox } from "@/component/form/checkox";
 import FormInput from "@/component/form/input";
+import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { ChangeEvent, useState } from "react";
@@ -33,6 +34,15 @@ export default function Page() {
     
     // for(let [key , value] of formData.entries()) {
     // console.log(`${key} : ${value}`);}
+
+    axios.post('http://localhost:8000/api/login' , formData , 
+      {
+        headers : {
+          "Content-Type" : "application/json" ,
+          }
+      }
+    ).then(res => console.log("success ! you are connected" , res)
+    ).catch(res => console.log('echec ! connexion echoué'))
   }
 
 

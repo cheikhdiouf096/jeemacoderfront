@@ -1,10 +1,12 @@
  "use client";
+import { useUserRole } from "@/app/utils/useUserRole";
 import { Button } from "@/component/form/button";
 import FormInput from "@/component/form/input";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
-import { ChangeEvent, useState } from "react";
+import { useRouter } from "next/router";
+import { ChangeEvent, useEffect, useState } from "react";
 
 
 type Value = {
@@ -12,37 +14,44 @@ type Value = {
   lastname : string,
   email : string,
   password : string,
-  status : string ,
+  metier : string ,
+  pays : string ,
+  ville : string
 }
 
 export default function Page() {
-
+  
   const [value , setValue ] = useState<Value>({
     firstname : '',
     lastname : '',
     email : '',
     password : '',
-    status : '',
+    metier : '',
+    pays : '',
+    ville : ''
   })
   const [pays , setPays ] = useState('')
-const handleChange = (e : ChangeEvent<HTMLInputElement>) => {
+
+  const handleChange = (e : ChangeEvent<HTMLInputElement>) => {
   const input = e.currentTarget;
   setValue({...value , [input.id] : input.value})
 }
-const role = "participant"
+// la donc il faut que je créé un custum hook qui return le role
 
-const handleSubmit = ((e : ChangeEvent<HTMLFormElement> ) => {
+const role = useUserRole()?.toString()
+
+const handleSubmit = (e : ChangeEvent<HTMLFormElement> ) => {
   e.preventDefault()
-  
   // const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content')
-
   const formData = new FormData()
   formData.append('firstname' , value.firstname)
   formData.append('lastname' , value.lastname)
+  formData.append('pays' , value.pays)
+  formData.append('ville' , value.ville)
   formData.append('email' , value.email)
   formData.append('password' , value.password)
-  formData.append('status' , value.status)
-  formData.append('role_id' , role)
+  formData.append('metier' , value.metier)
+  formData.append('role' , role)
 
     // for(let [key , value] of formData.entries()) {
     // console.log(`${key} : ${value}`);}
@@ -51,10 +60,10 @@ const handleSubmit = ((e : ChangeEvent<HTMLFormElement> ) => {
     headers : {
       "Content-Type" : "application/json" ,
     }
-  })
+  }).then(res => console.log( "success !! , you'r subscribed" , res))
+    .catch(res => console.log(res))
     
-})
-
+}
   return (
     <div className="h-screen flex justify-center items-center max-w-4xl m-auto">
         <div className="max-w-3xl m-auto flex flex-col gap-20 justify-center items-center py-10 px-20 rounded-md">
@@ -101,14 +110,34 @@ const handleSubmit = ((e : ChangeEvent<HTMLFormElement> ) => {
                     label="Password"
                   />
                   <FormInput
-                  id='status'
+                  id='metier'
                     type="name"
                     placeholder="developpeur"
-                    value={value.status}
+                    value={value.metier}
                     onChange={handleChange}
                     className=""
                     label="Profession "
                   />
+                  <div className="flex gap-3 ">
+                  <FormInput
+                    type="text"
+                    placeholder="Entrez votre prenom"
+                    value={value.pays}
+                    className="w-44"
+                    label="Pays"
+                    id="pays"
+                    onChange={handleChange}
+                  />
+                  <FormInput
+                    type="text"
+                    placeholder="Entrez votre nom"
+                    value={value.ville}
+                    onChange={handleChange}
+                    className="w-44"
+                    id="ville"
+                    label="Ville"
+                  />
+              </div>
         </div>
     <Button > s&apos;inscrire</Button>
      <div>
@@ -122,7 +151,7 @@ const handleSubmit = ((e : ChangeEvent<HTMLFormElement> ) => {
   </form>
   </div>
   <div className="w-full md:w-1/2 mt-4 md:mt-0">
-          <Image src="/illustration-login.jpg" alt="" className="w-full" width={300} height={300}/>
+          <Image src="/" alt="" className="w-full" width={300} height={300}/>
         </div>
   </div>
   );
